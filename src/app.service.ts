@@ -1,8 +1,17 @@
 import { Injectable } from '@nestjs/common';
 
+interface ILocationDto {
+  currentLocation: string;
+}
+
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getLocations(): ILocationDto[] {
+    const locations = [
+      { currentLocation: 'location1' },
+      { currentLocation: 'location2' },
+      { currentLocation: 'location3' },
+    ];
+    return locations;
   }
 }

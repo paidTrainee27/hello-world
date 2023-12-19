@@ -19,6 +19,10 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect([
+        { currentLocation: 'location1' },
+        { currentLocation: 'location2' },
+        { currentLocation: 'location3' },
+      ]);
   });
 });
