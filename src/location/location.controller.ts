@@ -1,13 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { LocationService } from './location.service';
 
 interface ILocationDto {
   currentLocation: string;
 }
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class LocationController {
+  constructor(private readonly appService: LocationService) {}
 
   @Get()
   getLocations(): ILocationDto[] {

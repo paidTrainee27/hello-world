@@ -1,4 +1,4 @@
-import { AppController } from './app.controller';
+import { AppController } from './location/location.controller';
 import { AppService } from './app.service';
 
 const service = new AppService();

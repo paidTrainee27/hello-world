@@ -5,7 +5,7 @@ interface ILocationDto {
 }
 
 @Injectable()
-export class AppService {
+export class LocationService {
   getLocations(): ILocationDto[] {
     const locations = [
       { currentLocation: 'location1' },
